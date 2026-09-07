@@ -1,0 +1,32 @@
+# Canonical portfolio order for the Kaido3016 GitHub profile.
+# Keep this file as the single source of truth for project ranking.
+# Changing a project's README, code, or metadata does not change this order.
+
+projects:
+  - rank: 1
+    name: QStock
+    repository: Kaido3016/QStock-Enterprise-Inventory-Intelligence-Platform
+  - rank: 2
+    name: AzureBot
+    repository: Kaido3016/AzureBot
+  - rank: 3
+    name: GCP GenAI Platform
+    repository: Kaido3016/gcp-genai-platform
+  - rank: 4
+    name: GoAnalyze
+    repository: Kaido3016/GoAnalyze---Enterprise-Document-Intelligence-Secure-RAG-Platform
+  - rank: 5
+    name: MediQuery
+    repository: Kaido3016/MediQuery
+  - rank: 6
+    name: DataGuard
+    repository: Kaido3016/DataGuard
+  - rank: 7
+    name: Gandalf
+    repository: Kaido3016/Gandalf
+  - rank: 8
+    name: CodingResearchAgentAI
+    repository: Kaido3016/CodingResearchAgentAI
+  - rank: 9
+    name: DeepScene-AI
+    repository: Kaido3016/DeepScene-AI
