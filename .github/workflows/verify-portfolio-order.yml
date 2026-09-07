@@ -1,0 +1,63 @@
+name: Verify portfolio order
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Verify canonical project order
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          expected=(
+            "QStock"
+            "AzureBot"
+            "GCP GenAI Platform"
+            "GoAnalyze"
+            "MediQuery"
+            "DataGuard"
+            "Gandalf"
+            "CodingResearchAgentAI"
+            "DeepScene-AI"
+          )
+
+          mapfile -t actual < <(
+            awk '
+              /^### / {
+                line=$0
+                sub(/^### [^[:alnum:]]*/, "", line)
+                sub(/^### [^0-9A-Za-z]*/, "", line)
+                if (line ~ /^QStock([[:space:]]|$)/) print "QStock"
+                else if (line ~ /^AzureBot([[:space:]]|$)/) print "AzureBot"
+                else if (line ~ /^GCP GenAI Platform([[:space:]]|$)/) print "GCP GenAI Platform"
+                else if (line ~ /^GoAnalyze([[:space:]]|$)/) print "GoAnalyze"
+                else if (line ~ /^MediQuery([[:space:]]|$)/) print "MediQuery"
+                else if (line ~ /^DataGuard([[:space:]]|$)/) print "DataGuard"
+                else if (line ~ /^Gandalf([[:space:]]|$)/) print "Gandalf"
+                else if (line ~ /^CodingResearchAgentAI([[:space:]]|$)/) print "CodingResearchAgentAI"
+                else if (line ~ /^DeepScene-AI([[:space:]]|$)/) print "DeepScene-AI"
+              }
+            ' README.md
+          )
+
+          if [[ "${actual[*]}" != "${expected[*]}" ]]; then
+            echo "Portfolio order mismatch."
+            echo "Expected: ${expected[*]}"
+            echo "Actual:   ${actual[*]}"
+            echo "See portfolio-order.yml for the canonical order."
+            exit 1
+          fi
+
+          echo "Portfolio order is locked and correct."
