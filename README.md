@@ -12,15 +12,15 @@ My focus is applied AI engineering: turning LLMs, retrieval, agents, structured 
 
 ## What I Build
 
-- **LLM applications** — OpenAI, Gemini / Vertex AI, Azure OpenAI, Ollama, structured outputs
+- **LLM applications** — OpenAI, Amazon Bedrock, Gemini / Vertex AI, Azure OpenAI, Ollama, structured outputs
 - **RAG systems** — hybrid/vector/semantic retrieval, grounding, citations, evidence handling
 - **Agentic AI** — LangGraph, tool calling, bounded agent loops, MCP, workflow orchestration
-- **AI security** — prompt-injection defense, authorization-aware retrieval, tenant isolation, SQL safety
+- **AI security** — prompt-injection defense, authorization-aware retrieval, tenant isolation, SQL safety, secure file handling
 - **AI evaluation** — regression datasets, retrieval metrics, groundedness, safety tests, latency/cost measurement
 - **Document intelligence** — ingestion, extraction, evidence preservation, semantic search
 - **Structured-data AI** — NL→SQL, deterministic routing, validation, read-only execution
 - **Multimodal AI** — vision, speech, image generation, desktop/tool interaction
-- **AI platforms** — FastAPI, PostgreSQL, Docker, Kubernetes, Terraform, CI/CD, cloud infrastructure
+- **AI platforms** — FastAPI, PostgreSQL, Docker, Kubernetes, Terraform, CDK, CI/CD, cloud infrastructure
 
 ---
 
@@ -37,6 +37,20 @@ QStock combines inventory management with a controlled natural-language interfac
 **Stack:** Python · FastAPI · PostgreSQL · OpenAI · Ollama · React · TypeScript · Docker
 
 → [View QStock](https://github.com/Kaido3016/QStock-Enterprise-Inventory-Intelligence-Platform)
+
+### ☁️ AWS GenAI LLM Chatbot — Enterprise RAG & AI Security
+
+Enterprise-oriented **AWS generative-AI chatbot and RAG platform**, built on the AWS sample architecture and extended with AI-specific security, evaluation, observability, file validation, and automated security tooling.
+
+**Highlights:** Amazon Bedrock · SageMaker · OpenSearch · S3 · Cognito · Lambda · AppSync/GraphQL · React · multi-provider LLMs · RAG evaluation · prompt-injection/RAG-poisoning defense · citation controls · token/cost/latency observability · secure upload validation · CodeQL · Dependabot.
+
+**Engineering work:** Added an A1–A6 hardening/evaluation layer around the original AWS sample, including a standard-library evaluation framework, retrieval-path prompt-injection defenses, redacted citations, AI cost/latency metrics, server-side file-signature and zip-bomb validation, and security automation.
+
+**Verification:** 211/211 tests passing locally across A1–A6. The repository explicitly distinguishes locally verified implementation from AWS-account-dependent deployment/runtime verification.
+
+**Stack:** AWS · Amazon Bedrock · SageMaker · OpenSearch · S3 · Cognito · Lambda · AppSync · CDK · Python · TypeScript · React · Jest · CodeQL · Dependabot
+
+→ [View AWS GenAI LLM Chatbot](https://github.com/Kaido3016/aws-genai-llm-chatbot)
 
 ### ☁️ AzureBot — Enterprise RAG Engineering Platform
 
@@ -141,11 +155,11 @@ My strongest engineering themes:
 
 **Application:** Python · FastAPI · PostgreSQL · SQLAlchemy · Pydantic · React · TypeScript · Next.js
 
-**Cloud / Platform:** Azure · Azure OpenAI · Azure AI Search · GCP · Vertex AI · Gemini · Docker · Kubernetes · Helm · Terraform · Nginx
+**Cloud / Platform:** AWS · Amazon Bedrock · SageMaker · OpenSearch · S3 · Cognito · Lambda · AppSync · AWS CDK · Azure · Azure OpenAI · Azure AI Search · GCP · Vertex AI · Gemini · Docker · Kubernetes · Helm · Terraform · Nginx
 
 **AI Tooling:** LangGraph · LangChain · MCP · OpenAI · Ollama · GitHub Actions
 
-**Quality / Security:** Pytest · Ruff · CI/CD · AI Evaluation · RAG Evaluation · Threat Modeling · RBAC · ABAC · Guardrails · Observability
+**Quality / Security:** Pytest · Jest · Ruff · CodeQL · Dependabot · CI/CD · AI Evaluation · RAG Evaluation · Threat Modeling · RBAC · ABAC · Guardrails · Observability
 
 ---
 
@@ -154,6 +168,7 @@ My strongest engineering themes:
 | Project | Core signal |
 |---|---|
 | **QStock** | AI + NL→SQL + real users |
+| **AWS GenAI LLM Chatbot** | Bedrock + enterprise RAG + AI security + evaluation |
 | **AzureBot** | Enterprise RAG + security + evaluation |
 | **GCP GenAI Platform** | Vertex AI + RAG + agents + MCP |
 | **GoAnalyze** | Secure RAG + multi-tenancy + infrastructure |
@@ -170,4 +185,4 @@ My strongest engineering themes:
 - [LinkedIn](https://www.linkedin.com/in/ali-el-sayed-ali/)
 - [GitHub](https://github.com/Kaido3016)
 
-> **Open to AI Engineer, Applied AI Engineer, AI Platform, LLM, RAG, Generative AI, and Agentic AI opportunities.**
+> **Open to AI Engineer, Applied AI Engineer, AI Platform, LLM, RAG, Generative AI, Agentic AI, and Cloud AI opportunities.**
