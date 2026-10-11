@@ -37,8 +37,8 @@ jobs:
             awk '
               /^### / {
                 line=$0
-                sub(/^### [^[:alnum:]]*/, "", line)
-                sub(/^### [^0-9A-Za-z]*/, "", line)
+                sub(/^### /, "", line)
+                sub(/^[0-9]+[.] \[/, "", line)
                 if (line ~ /^QStock([[:space:]]|$)/) print "QStock"
                 else if (line ~ /^AzureBot([[:space:]]|$)/) print "AzureBot"
                 else if (line ~ /^GCP GenAI Platform([[:space:]]|$)/) print "GCP GenAI Platform"
